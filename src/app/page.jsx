@@ -9,7 +9,7 @@ export default function Home() {
       <NavBar />
 
       <div className="flex flex-col items-center p-5 w-screen gap-5">
-        <div className="flex flex-col md:flex-row items-center gap-5">
+        <div className="grid grid-flow-col items-center gap-5 w-full">
           <PhotoCarousal />
 
           <Profile />
