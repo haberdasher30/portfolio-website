@@ -2,7 +2,14 @@
 
 import { Tabs, Tab } from "@nextui-org/react";
 
-import data from "@/data/data.json";
+import {
+  projects,
+  certificates,
+  experience,
+  achievements,
+  blogs,
+  socialwork,
+} from "@/data/portfolioTabs";
 import PortfolioContent from "./PortfolioContent";
 
 export default function PortfolioTabs() {
@@ -25,21 +32,44 @@ export default function PortfolioTabs() {
           key="projects"
           title={<p className="w-44 text-center tracking-widest">PROJECTS</p>}
         >
-          <PortfolioContent items={data.projects} />
+          <PortfolioContent items={projects} />
         </Tab>
+
         <Tab
           key="certificates"
           title={
             <p className="w-44 text-center tracking-widest">CERTIFICATES</p>
           }
         >
-          <PortfolioContent items={data.certificates} />
+          <PortfolioContent items={certificates} />
         </Tab>
         <Tab
-          key="evs"
-          title={<p className="w-44 text-center tracking-widest">EVS</p>}
+          key="experience"
+          title={<p className="w-44 text-center tracking-widest">EXPERIENCE</p>}
         >
-          <PortfolioContent items={data.evs} />
+          <PortfolioContent items={experience} />
+        </Tab>
+        <Tab
+          key="achievements"
+          title={
+            <p className="w-44 text-center tracking-widest">ACHIEVEMENTS</p>
+          }
+        >
+          <PortfolioContent items={achievements} />
+        </Tab>
+        <Tab
+          key="blogs"
+          title={<p className="w-44 text-center tracking-widest">BLOGS</p>}
+        >
+          <PortfolioContent items={blogs} />
+        </Tab>
+        <Tab
+          key="socialwork"
+          title={
+            <p className="w-44 text-center tracking-widest">SOCIAL WORK</p>
+          }
+        >
+          <PortfolioContent items={socialwork} />
         </Tab>
       </Tabs>
     </div>
