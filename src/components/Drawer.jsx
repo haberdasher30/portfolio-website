@@ -49,8 +49,8 @@ const Drawer = ({ isOpen, setOpen }) => {
         {(onClose) => (
           <>
             <ModalHeader>
-              <p className="text-greenColor text-center w-full text-2xl">
-                CONNECT WITH ME
+              <p className="text-greenColor text-center w-full text-xl md:text-2xl">
+                Connect With Me
               </p>
             </ModalHeader>
             <ModalBody>
@@ -68,10 +68,10 @@ const Drawer = ({ isOpen, setOpen }) => {
                       width={100}
                       height={0}
                       loading="lazy"
-                      className="w-[40px] md:w-[60px] h-auto invert"
+                      className="w-[40px] md:w-[50px] h-auto invert"
                     />
 
-                    <p className="text-grayColor text-center text-lg md:text-xl font-bold">
+                    <p className="text-grayColor text-center text-base md:text-lg font-bold">
                       {social.alt}
                     </p>
                   </Link>
