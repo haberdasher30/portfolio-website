@@ -17,20 +17,22 @@ const PortfolioCard = ({ content }) => {
   return (
     <>
       <div onClick={onOpen}>
-        <Card className="w-[300px] bg-backgroundContainer border-backgroundContainer text-whiteColor hover:scale-105 transition-all">
-          <CardBody className="flex flex-col items-center justify-center gap-5 text-center px-3 py-10">
+        <Card className="w-[200px] md:w-[300px] bg-backgroundContainer border-backgroundContainer text-whiteColor hover:scale-105 transition-all">
+          <CardBody className="flex flex-col items-center justify-center gap-5 text-center px-3 py-6 md:py-10">
             <Image
               src={content.src}
               alt={content.title}
               width={100}
               height={0}
               loading="lazy"
-              className="w-[80%] h-auto"
+              className="w-[70%] md:w-[80%] h-auto"
             />
 
-            <h1 className="text-xl font-medium">{content.title}</h1>
+            <h1 className="text-lg mdtext-xl font-medium">{content.title}</h1>
 
-            <p className="text-sm font-light">{content.description}</p>
+            <p className="text-xs md:text-sm font-light">
+              {content.description}
+            </p>
           </CardBody>
         </Card>
       </div>
@@ -80,7 +82,7 @@ const PortfolioCard = ({ content }) => {
 const PortfolioContent = ({ items }) => {
   return (
     <div
-      className="scroll-smooth overflow-x-scroll w-full"
+      className="scroll-smooth overflow-x-scroll w-full portfolioContent"
       style={{
         scrollbarWidth: "thin",
         scrollBehavior: "smooth",

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const PhotoCarousal = () => {
   return (
-    <div className="col-span-1 md:col-span-3 w-full h-[300px] md:h-[500px] bg-backgroundContainer rounded-lg">
+    <div className="basis-0 md:basis-2/6 w-full h-[300px] md:h-[500px] bg-backgroundContainer rounded-lg">
       <Carousel
         loop
         autoplay

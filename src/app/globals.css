@@ -26,6 +26,11 @@
   text-rendering: optimizeLegibility;
 }
 
+* ::-webkit-scrollbar {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   line-height: 1.5;
@@ -39,4 +44,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.portfolioContent::-webkit-scrollbar {
+  height: 7px;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scrollbar-color: var(--green-color) var(--gray-color);
+}
+
+.portfolioContent::-webkit-scrollbar-thumb {
+  background-color: var(--green-color);
+}
+
+.portfolioContent::-webkit-scrollbar-track {
+  background-color: var(--gray-color);
 }
