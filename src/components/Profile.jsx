@@ -2,16 +2,7 @@ import Image from "next/image";
 
 const Profile = () => {
   return (
-    <div className="grid place-items-center col-span-3 bg-backgroundContainer rounded-lg">
-      <Image
-        src="/profile.png"
-        alt="Vercel Logo"
-        width={100}
-        height={0}
-        loading="lazy"
-        className="w-[300px] h-auto"
-      />
-    </div>
+    <div className="col-span-1 md:col-span-6 w-full h-full bg-backgroundContainer rounded-lg text-whiteColor"></div>
   );
 };
 

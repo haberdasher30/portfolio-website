@@ -1,7 +1,12 @@
 "use client";
 
 import { NextUIProvider } from "@nextui-org/react";
+import { ThemeProvider } from "@material-tailwind/react";
 
 export function Providers({ children }) {
-  return <NextUIProvider>{children}</NextUIProvider>;
+  return (
+    <NextUIProvider>
+      <ThemeProvider>{children}</ThemeProvider>
+    </NextUIProvider>
+  );
 }
