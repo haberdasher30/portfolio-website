@@ -24,7 +24,7 @@ const Hero = () => {
             sustainability into project leadership.
           </h1>
 
-          <Button className="bg-backgroundContainer hover:bg-backgroundNavbar text-greenColor cursor-pointer py-4 px-10 h-full font-semibold tracking-[2px] text-md">
+          <Button className="bg-backgroundContainer hover:bg-backgroundNavbar text-greenColor cursor-pointer py-4 px-10 h-full font-semibold tracking-[2px] text-sm">
             ABOUT ME
           </Button>
         </div>
