@@ -25,9 +25,9 @@ module.exports = withMT({
         borderColor: "var(--border-color)",
       },
       animation: {
-        typewriter: "typewriter 4s steps(22) infinite alternate",
+        typewriter: "typewriter 3s steps(22) infinite alternate",
         caret:
-          "typewriter 4s steps(22) infinite alternate, blink 1s steps(22) infinite 4s",
+          "typewriter 3s steps(22) infinite alternate, blink 1s steps(22) infinite 3s",
       },
       keyframes: {
         typewriter: {

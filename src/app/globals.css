@@ -41,7 +41,7 @@ body {
   font-family: "NeueHaasUnica", Roboto, sans-serif;
 }
 
-code {
+.code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
