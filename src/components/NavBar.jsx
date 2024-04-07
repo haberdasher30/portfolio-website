@@ -10,7 +10,7 @@ const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="w-full flex flex-row items-center justify-between bg-backgroundNavbar px-5 py-3 border-borderColor border-b-2">
+    <div className="top-0 fixed w-full flex flex-row items-center justify-between bg-backgroundNavbar px-5 py-3 border-borderColor border-b-2">
       <Image
         src="/logo.png"
         alt="Vercel Logo"

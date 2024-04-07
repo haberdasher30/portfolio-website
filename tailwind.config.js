@@ -24,6 +24,35 @@ module.exports = withMT({
         backgroundRedHover: "var(--background-red-hover)",
         borderColor: "var(--border-color)",
       },
+      animation: {
+        typewriter: "typewriter 4s steps(22) infinite alternate",
+        caret:
+          "typewriter 4s steps(22) infinite alternate, blink 1s steps(22) infinite 4s",
+      },
+      keyframes: {
+        typewriter: {
+          to: {
+            left: "100%",
+          },
+        },
+        blink: {
+          "0%": {
+            opacity: "0",
+          },
+          "0.1%": {
+            opacity: "1",
+          },
+          "50%": {
+            opacity: "1",
+          },
+          "50.1%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "0",
+          },
+        },
+      },
     },
   },
   darkMode: "class",

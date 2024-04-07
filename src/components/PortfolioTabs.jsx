@@ -14,7 +14,7 @@ import PortfolioContent from "./PortfolioContent";
 
 export default function PortfolioTabs() {
   return (
-    <div className="flex w-full flex-col">
+    <div className="flex w-full flex-col px-5">
       <Tabs
         aria-label="Options"
         color="primary"
