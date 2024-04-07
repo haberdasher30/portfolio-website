@@ -21,7 +21,7 @@ const NavBar = () => {
       />
       <Button
         onClick={() => setOpen(true)}
-        className="bg-backgroundRed hover:bg-backgroundRedHover cursor-pointer text-redColor rounded-md py-4 px-4 md:px-8 h-full font-medium tracking-[2px] text-xs"
+        className="bg-backgroundRed hover:bg-backgroundRedHover cursor-pointer text-redColor rounded-md py-4 px-4 md:px-8 h-full font-semibold tracking-[2px] text-xs"
       >
         CONNECT WITH ME
       </Button>
