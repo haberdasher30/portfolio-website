@@ -43,20 +43,20 @@ const PortfolioCard = ({ content }) => {
         backdrop="blur"
         closeButton={<></>}
       >
-        <ModalContent className="gap-5 bg-backgroundNavbar p-5 mx-5 md:mx-0">
+        <ModalContent className="gap-5 bg-backgroundContainer p-5 mx-5 md:mx-0">
           {(onClose) => (
             <>
               <ModalHeader>
-                <p className="text-greenColor text-center w-full text-xl md:text-2xl">
+                <p className="text-greenColor text-center w-full text-xl md:text-3xl">
                   {content.title}
                 </p>
               </ModalHeader>
               <ModalBody>
-                <p className="text-whiteColor text-center w-full">
+                <p className="text-whiteColor text-center w-full text-sm md:text-base">
                   {content.description}
                 </p>
               </ModalBody>
-              <ModalFooter className="flex flex-row items-center justify-center">
+              <ModalFooter className="flex flex-row items-center justify-center gap-5">
                 <Button
                   onPress={onClose}
                   className="bg-backgroundRed hover:bg-backgroundRedHover cursor-pointer text-redColor rounded-md py-4 px-4 md:px-8 h-full font-medium tracking-[2px] text-xs"
@@ -66,7 +66,7 @@ const PortfolioCard = ({ content }) => {
 
                 <Button
                   onPress={onClose}
-                  className="bg-backgroundContainer hover:bg-backgroundRoot cursor-pointer text-whiteColor rounded-md py-4 px-4 md:px-8 h-full font-medium tracking-[2px] text-xs"
+                  className="bg-backgroundNavbar hover:bg-backgroundRoot cursor-pointer text-whiteColor rounded-md py-4 px-4 md:px-8 h-full font-medium tracking-[2px] text-xs"
                 >
                   VERIFY
                 </Button>
