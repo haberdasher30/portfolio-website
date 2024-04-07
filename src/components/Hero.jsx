@@ -25,7 +25,7 @@ const Hero = () => {
           </h1>
 
           <Button className="bg-backgroundContainer hover:bg-backgroundNavbar text-greenColor cursor-pointer py-4 px-10 h-full font-medium tracking-[2px] text-md">
-            Read More
+            ABOUT ME
           </Button>
         </div>
       </div>
@@ -53,7 +53,7 @@ const Hero = () => {
           </h1>
 
           <Button className="bg-backgroundContainer hover:bg-backgroundNavbar text-greenColor cursor-pointer py-4 px-5 h-full font-medium tracking-[2px] text-sm">
-            Read More
+            ABOUT ME
           </Button>
         </div>
       </div>
