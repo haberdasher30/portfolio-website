@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="w-full h-dvh bg-[url('/background.svg')] bg-contain bg-center bg-fixed flex items-center justify-center">
-      <div className="container flex flex-col-reverse md:flex-row items-center justify-center gap-5 w-full h-full">
+    <div className="w-full h-dvh bg-[url('/background.svg')] bg-contain bg-fixed flex items-center justify-center">
+      <div className="container flex flex-col-reverse md:flex-row items-center justify-center gap-10 w-full h-full">
         <Image
           width={1988}
           height={3740}
