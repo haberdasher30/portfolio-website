@@ -9,12 +9,12 @@ const Hero = () => {
           width={1988}
           height={3740}
           src="/funko.png"
-          className="w-auto h-[600px] bg-transparent"
+          className="w-auto h-[600px] bg-transparent select-none"
           priority
         />
 
         <div className="flex flex-col items-start justify-center gap-10 w-max">
-          <h1 className="code relative w-max tracking-tighter text-6xl font-bold z-10 before:absolute before:inset-0 before:animate-typewriter before:bg-backgroundRoot after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-whiteColor text-greenColor">
+          <h1 className="code select-none relative w-max tracking-tighter text-6xl font-bold z-10 before:absolute before:inset-0 before:animate-typewriter before:bg-backgroundRoot after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-whiteColor text-greenColor">
             Hi, I am NISHIT BATWAL.
           </h1>
 
@@ -32,7 +32,7 @@ const Hero = () => {
 
       <div className="container flex lg:hidden flex-col items-center justify-center gap-10 w-full h-full p-5 mt-16">
         <div className="flex flex-col items-center justify-center w-full">
-          <h1 className="flex code relative w-max tracking-tighter text-2xl font-bold z-10 before:absolute before:inset-0 before:animate-typewriter before:bg-backgroundRoot after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-whiteColor text-greenColor">
+          <h1 className="code select-none relative w-max tracking-tighter text-2xl font-bold z-10 before:absolute before:inset-0 before:animate-typewriter before:bg-backgroundRoot after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-whiteColor text-greenColor">
             Hi, I am NISHIT BATWAL.
           </h1>
         </div>
@@ -41,7 +41,7 @@ const Hero = () => {
           width={1988}
           height={3740}
           src="/funko.png"
-          className="w-[45%] h-auto bg-transparent"
+          className="w-[45%] h-auto bg-transparent select-none"
           priority
         />
 
