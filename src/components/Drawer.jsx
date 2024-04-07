@@ -21,7 +21,7 @@ const Drawer = ({ isOpen, setOpen }) => {
       size="full"
       hideCloseButton={true}
       classNames={{
-        wrapper: "flex justify-end w-screen h-dvh max-h-dvh",
+        wrapper: "flex justify-end w-screen h-svh max-h-svh",
       }}
       motionProps={{
         variants: {
@@ -43,7 +43,7 @@ const Drawer = ({ isOpen, setOpen }) => {
           },
         },
       }}
-      className="rounded-md max-w-md w-full h-dvh max-h-dvh bg-backgroundNavbar"
+      className="rounded-md max-w-md w-full h-svh max-h-svh bg-backgroundNavbar"
     >
       <ModalContent className="w-[80%] py-5 gap-5">
         {(onClose) => (

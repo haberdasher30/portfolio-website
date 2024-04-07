@@ -3,7 +3,7 @@ import { Button } from "@nextui-org/react";
 
 const Hero = () => {
   return (
-    <div className="w-full h-dvh bg-[url('/background.svg')] bg-contain bg-fixed flex items-center justify-center">
+    <div className="w-full h-svh bg-[url('/background.svg')] bg-contain bg-fixed flex items-center justify-center">
       <div className="container hidden lg:flex flex-row items-center justify-between w-full h-full p-5">
         <Image
           width={1988}
