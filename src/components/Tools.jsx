@@ -4,16 +4,12 @@ const logos = [
     alt: "Kali",
   },
   {
-    src: "/tools/wireshark.svg",
-    alt: "Wireshark",
-  },
-  {
     src: "/tools/parrot.svg",
     alt: "Parrot",
   },
   {
-    src: "/tools/elastic.svg",
-    alt: "Elastic",
+    src: "/tools/nmap.svg",
+    alt: "Nmap",
   },
   {
     src: "/tools/metasploit.svg",
@@ -24,19 +20,23 @@ const logos = [
     alt: "Hydra",
   },
   {
-    src: "/tools/splunk.svg",
-    alt: "Splunk",
+    src: "/tools/wireshark.svg",
+    alt: "Wireshark",
   },
   {
-    src: "/tools/nmap.svg",
-    alt: "Nmap",
+    src: "/tools/elastic.svg",
+    alt: "Elastic",
+  },
+  {
+    src: "/tools/splunk.svg",
+    alt: "Splunk",
   },
 ];
 
 const LogoCloud = ({ aria_hidden = "false" }) => {
   return (
     <ul
-      className="flex items-center justify-center md:justify-start [&_img]:max-w-none animate-infinite-scroll"
+      className="flex items-center justify-center [&_img]:max-w-none animate-infinite-scroll"
       aria-hidden={aria_hidden}
     >
       {logos.map((logo) => (
@@ -46,7 +46,7 @@ const LogoCloud = ({ aria_hidden = "false" }) => {
             alt={logo.alt}
             className={`${
               logo.alt === "Splunk" ? "h-8 md:h-12" : "h-16 md:h-24"
-            } w-auto mx-5 md:mx-10 filter-none md:filter grayscale hover:filter-none transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-2xl`}
+            } w-auto mx-5 md:mx-10 transition-all duration-1000 ease-in-out hover:scale-110 hover:shadow-2xl`}
           />
         </li>
       ))}

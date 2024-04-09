@@ -88,7 +88,7 @@ const PortfolioContent = ({ items }) => {
         scrollbarColor: "#9fef00 #1a2332",
       }}
     >
-      <div className="flex flex-row items-center justify-center gap-5 m-5 w-max">
+      <div className="flex flex-row items-center justify-center gap-5 m-2 md:m-5 w-max">
         {items.map((item, index) => (
           <PortfolioCard key={index} content={item} />
         ))}
