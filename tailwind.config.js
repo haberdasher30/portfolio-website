@@ -28,8 +28,13 @@ module.exports = withMT({
         typewriter: "typewriter 3s steps(22) infinite alternate",
         caret:
           "typewriter 3s steps(22) infinite alternate, blink 1s steps(22) infinite 3s",
+        "infinite-scroll": "infinite-scroll 20s linear infinite",
       },
       keyframes: {
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
         typewriter: {
           to: {
             left: "100%",
