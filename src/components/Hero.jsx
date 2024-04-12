@@ -1,7 +1,21 @@
 import Image from "next/image";
+import { db } from "@/firebase/config";
 import { Button } from "@nextui-org/react";
+import { doc, getDoc } from "firebase/firestore";
 
-const Hero = () => {
+const Hero = async () => {
+  let intro = "";
+
+  const docRef = doc(db, "hero", "1");
+
+  const docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    intro = docSnap.data().intro;
+  } else {
+    console.log("Error fetching data from server!");
+  }
+
   return (
     <div className="w-full h-svh bg-[url('/background.svg')] bg-contain bg-fixed flex items-center justify-center">
       <div className="container hidden lg:flex flex-row items-center justify-between w-full h-full p-5">
@@ -9,6 +23,7 @@ const Hero = () => {
           width={1988}
           height={3740}
           src="/funko.png"
+          alt="Hero Funko"
           className="w-auto h-[600px] bg-transparent select-none"
           priority
         />
@@ -19,9 +34,7 @@ const Hero = () => {
           </h1>
 
           <h1 className="text-xl font-semibold text-whiteColor whitespace-break-spaces max-w-screen-md">
-            I'm a computer science student skilled in defensive cybersecurity,
-            marketing, and management. Passionate about integrating
-            sustainability into project leadership.
+            {intro}
           </h1>
 
           <Button className="bg-backgroundContainer hover:bg-backgroundNavbar text-greenColor cursor-pointer py-4 px-10 h-full font-semibold tracking-[2px] text-sm">
@@ -41,6 +54,7 @@ const Hero = () => {
           width={1988}
           height={3740}
           src="/funko.png"
+          alt="Hero Funko"
           className="w-[45%] h-auto bg-transparent select-none"
           priority
         />

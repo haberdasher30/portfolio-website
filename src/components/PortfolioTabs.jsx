@@ -1,18 +1,45 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Tabs, Tab } from "@nextui-org/react";
+import { collection, getDocs } from "firebase/firestore";
 
-import {
-  projects,
-  certificates,
-  experience,
-  achievements,
-  blogs,
-  socialwork,
-} from "@/data/portfolioTabs";
+import { db } from "@/firebase/config";
 import PortfolioContent from "./PortfolioContent";
 
 export default function PortfolioTabs() {
+  const [portfolioData, setPortfolioData] = useState({});
+  const portfolioCollections = [
+    "projects",
+    "certificates",
+    "experience",
+    "blogs",
+    "socialwork",
+  ];
+
+  useEffect(() => {
+    const fetchPortfolio = () => {
+      portfolioCollections.forEach(async (portfolioName) => {
+        try {
+          const collectionRef = collection(db, "projects");
+          const collectionSnapshot = await getDocs(collectionRef);
+          const localPortfolioData = collectionSnapshot.docs.map((doc) =>
+            doc.data()
+          );
+
+          setPortfolioData((prevPortfolioData) => ({
+            ...prevPortfolioData,
+            [portfolioName]: localPortfolioData,
+          }));
+        } catch (error) {
+          console.error("Error occurred while fetching data:", error);
+        }
+      });
+    };
+
+    fetchPortfolio();
+  }, []);
+
   return (
     <div className="flex w-full flex-col px-5">
       <Tabs
@@ -34,7 +61,7 @@ export default function PortfolioTabs() {
             <p className="w-32 md:w-44 text-center tracking-widest">PROJECTS</p>
           }
         >
-          <PortfolioContent items={projects} />
+          <PortfolioContent items={portfolioData?.projects} />
         </Tab>
 
         <Tab
@@ -45,7 +72,7 @@ export default function PortfolioTabs() {
             </p>
           }
         >
-          <PortfolioContent items={certificates} />
+          <PortfolioContent items={portfolioData?.certificates} />
         </Tab>
         <Tab
           key="experience"
@@ -55,17 +82,7 @@ export default function PortfolioTabs() {
             </p>
           }
         >
-          <PortfolioContent items={experience} />
-        </Tab>
-        <Tab
-          key="achievements"
-          title={
-            <p className="w-32 md:w-44 text-center tracking-widest">
-              ACHIEVEMENTS
-            </p>
-          }
-        >
-          <PortfolioContent items={achievements} />
+          <PortfolioContent items={portfolioData?.experience} />
         </Tab>
         <Tab
           key="blogs"
@@ -73,7 +90,7 @@ export default function PortfolioTabs() {
             <p className="w-32 md:w-44 text-center tracking-widest">BLOGS</p>
           }
         >
-          <PortfolioContent items={blogs} />
+          <PortfolioContent items={portfolioData?.blogs} />
         </Tab>
         <Tab
           key="socialwork"
@@ -83,7 +100,7 @@ export default function PortfolioTabs() {
             </p>
           }
         >
-          <PortfolioContent items={socialwork} />
+          <PortfolioContent items={portfolioData?.socialwork} />
         </Tab>
       </Tabs>
     </div>
