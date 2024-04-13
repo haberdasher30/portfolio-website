@@ -24,8 +24,8 @@ const PortfolioCard = ({ content }) => {
               <Image
                 src={content.logo[0].downloadURL}
                 alt={content.title}
-                width={100}
-                height={100}
+                width={1000}
+                height={1000}
                 className="w-[120px] md:w-[200px] h-auto"
               />
             </div>

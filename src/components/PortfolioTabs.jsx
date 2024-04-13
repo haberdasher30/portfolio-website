@@ -73,21 +73,22 @@ export default function PortfolioTabs() {
             "group-data-[selected=true]:text-whiteColor group-data-[selected=false]:text-grayColor text-xs md:text-sm",
         }}
       >
-        {portfolioTabs.map(
-          (tab) =>
-            portfolioData[tab.key].length > 0 && (
-              <Tab
-                key={tab.key}
-                title={
-                  <p className="w-32 md:w-44 text-center tracking-widest">
-                    {tab.title}
-                  </p>
-                }
-              >
-                <PortfolioContent items={portfolioData[tab.key]} />
-              </Tab>
-            )
-        )}
+        {portfolioTabs != {} &&
+          portfolioTabs?.map(
+            (tab) =>
+              portfolioData[tab.key]?.length > 0 && (
+                <Tab
+                  key={tab.key}
+                  title={
+                    <p className="w-32 md:w-44 text-center tracking-widest">
+                      {tab.title}
+                    </p>
+                  }
+                >
+                  <PortfolioContent items={portfolioData[tab.key]} />
+                </Tab>
+              )
+          )}
       </Tabs>
     </div>
   );
