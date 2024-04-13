@@ -9,19 +9,35 @@ import PortfolioContent from "./PortfolioContent";
 
 export default function PortfolioTabs() {
   const [portfolioData, setPortfolioData] = useState({});
-  const portfolioCollections = [
-    "projects",
-    "certificates",
-    "experience",
-    "blogs",
-    "socialwork",
+
+  const portfolioTabs = [
+    {
+      title: "PROJECTS",
+      key: "projects",
+    },
+    {
+      title: "CERTIFICATES",
+      key: "certificates",
+    },
+    {
+      title: "EXPERIENCE",
+      key: "experience",
+    },
+    {
+      title: "BLOGS",
+      key: "blogs",
+    },
+    {
+      title: "SOCIAL WORK",
+      key: "socialwork",
+    },
   ];
 
   useEffect(() => {
     const fetchPortfolio = () => {
-      portfolioCollections.forEach(async (portfolioName) => {
+      portfolioTabs.forEach(async (portfolioName) => {
         try {
-          const collectionRef = collection(db, "projects");
+          const collectionRef = collection(db, portfolioName.key);
           const collectionSnapshot = await getDocs(collectionRef);
           const localPortfolioData = collectionSnapshot.docs.map((doc) =>
             doc.data()
@@ -29,7 +45,7 @@ export default function PortfolioTabs() {
 
           setPortfolioData((prevPortfolioData) => ({
             ...prevPortfolioData,
-            [portfolioName]: localPortfolioData,
+            [portfolioName.key]: localPortfolioData,
           }));
         } catch (error) {
           console.error("Error occurred while fetching data:", error);
@@ -39,6 +55,8 @@ export default function PortfolioTabs() {
 
     fetchPortfolio();
   }, []);
+
+  console.log(portfolioData);
 
   return (
     <div className="flex w-full flex-col px-5">
@@ -55,53 +73,21 @@ export default function PortfolioTabs() {
             "group-data-[selected=true]:text-whiteColor group-data-[selected=false]:text-grayColor text-xs md:text-sm",
         }}
       >
-        <Tab
-          key="projects"
-          title={
-            <p className="w-32 md:w-44 text-center tracking-widest">PROJECTS</p>
-          }
-        >
-          <PortfolioContent items={portfolioData?.projects} />
-        </Tab>
-
-        <Tab
-          key="certificates"
-          title={
-            <p className="w-32 md:w-44 text-center tracking-widest">
-              CERTIFICATES
-            </p>
-          }
-        >
-          <PortfolioContent items={portfolioData?.certificates} />
-        </Tab>
-        <Tab
-          key="experience"
-          title={
-            <p className="w-32 md:w-44 text-center tracking-widest">
-              EXPERIENCE
-            </p>
-          }
-        >
-          <PortfolioContent items={portfolioData?.experience} />
-        </Tab>
-        <Tab
-          key="blogs"
-          title={
-            <p className="w-32 md:w-44 text-center tracking-widest">BLOGS</p>
-          }
-        >
-          <PortfolioContent items={portfolioData?.blogs} />
-        </Tab>
-        <Tab
-          key="socialwork"
-          title={
-            <p className="w-32 md:w-44 text-center tracking-widest">
-              SOCIAL WORK
-            </p>
-          }
-        >
-          <PortfolioContent items={portfolioData?.socialwork} />
-        </Tab>
+        {portfolioTabs.map(
+          (tab) =>
+            portfolioData[tab.key].length > 0 && (
+              <Tab
+                key={tab.key}
+                title={
+                  <p className="w-32 md:w-44 text-center tracking-widest">
+                    {tab.title}
+                  </p>
+                }
+              >
+                <PortfolioContent items={portfolioData[tab.key]} />
+              </Tab>
+            )
+        )}
       </Tabs>
     </div>
   );
