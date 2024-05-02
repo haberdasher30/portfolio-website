@@ -1,17 +1,23 @@
-import "./globals.css";
-import { Providers } from "@/components/Provider";
+import './globals.css';
+import NavBar from '@/components/shared/NavBar';
+import { Providers } from '@/components/shared/Provider';
 
 export const metadata = {
-  title: "Portfolio | Nishit Batwal",
+  title: 'Portfolio | Nishit Batwal',
   description: "Nishit Batwal's portfolio",
-  image: "/logo.png",
+  image: '/logo.png',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="dark">
-        <Providers>{children}</Providers>
+    <html lang='en' className='bg-backgroundRoot'>
+      <body className='dark'>
+        <Providers>
+          <main className='min-h-screen w-screen flex flex-col items-center'>
+            <NavBar />
+            {children}
+          </main>
+        </Providers>
       </body>
     </html>
   );

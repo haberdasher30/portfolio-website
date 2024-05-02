@@ -1,35 +1,35 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import { Tabs, Tab } from "@nextui-org/react";
-import { collection, getDocs } from "firebase/firestore";
+import { useEffect, useState } from 'react';
+import { Tabs, Tab } from '@nextui-org/react';
+import { collection, getDocs } from 'firebase/firestore';
 
-import { db } from "@/firebase/config";
-import PortfolioContent from "./PortfolioContent";
+import { db } from '@/firebase/config';
+import PortfolioContent from './PortfolioContent';
 
 export default function PortfolioTabs() {
   const [portfolioData, setPortfolioData] = useState({});
 
   const portfolioTabs = [
     {
-      title: "PROJECTS",
-      key: "projects",
+      title: 'PROJECTS',
+      key: 'projects',
     },
     {
-      title: "CERTIFICATES",
-      key: "certificates",
+      title: 'CERTIFICATES',
+      key: 'certificates',
     },
     {
-      title: "EXPERIENCE",
-      key: "experience",
+      title: 'EXPERIENCE',
+      key: 'experience',
     },
     {
-      title: "BLOGS",
-      key: "blogs",
+      title: 'BLOGS',
+      key: 'blogs',
     },
     {
-      title: "SOCIAL WORK",
-      key: "socialwork",
+      title: 'SOCIAL WORK',
+      key: 'socialwork',
     },
   ];
 
@@ -48,7 +48,7 @@ export default function PortfolioTabs() {
             [portfolioName.key]: localPortfolioData,
           }));
         } catch (error) {
-          console.error("Error occurred while fetching data:", error);
+          console.error('Error occurred while fetching data:', error);
         }
       });
     };
@@ -56,21 +56,19 @@ export default function PortfolioTabs() {
     fetchPortfolio();
   }, []);
 
-  console.log(portfolioData);
-
   return (
-    <div className="flex w-full flex-col px-5">
+    <div className='flex w-full flex-col px-5'>
       <Tabs
-        aria-label="Options"
-        color="primary"
-        variant="underlined"
+        aria-label='Options'
+        color='primary'
+        variant='underlined'
         classNames={{
           tabList:
-            "gap-5 w-full relative rounded-none p-0 border-b border-grayColor border-divider",
-          cursor: "w-full bg-greenColor",
-          tab: "max-w-fit px-0 h-10 md:h-12",
+            'gap-5 w-full relative rounded-none p-0 border-b border-grayColor border-divider',
+          cursor: 'w-full bg-greenColor',
+          tab: 'max-w-fit px-0 h-10 md:h-12',
           tabContent:
-            "group-data-[selected=true]:text-whiteColor group-data-[selected=false]:text-grayColor text-xs md:text-sm",
+            'group-data-[selected=true]:text-whiteColor group-data-[selected=false]:text-grayColor text-xs md:text-sm',
         }}
       >
         {portfolioTabs != {} &&
@@ -80,7 +78,7 @@ export default function PortfolioTabs() {
                 <Tab
                   key={tab.key}
                   title={
-                    <p className="w-32 md:w-44 text-center tracking-widest">
+                    <p className='w-32 md:w-44 text-center tracking-widest'>
                       {tab.title}
                     </p>
                   }

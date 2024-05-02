@@ -1,8 +1,8 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-@import "/public/fonts/fonts.css";
+@import '/public/fonts/fonts.css';
 
 :root {
   --white-color: #ffffff !important;
@@ -17,6 +17,11 @@
   --background-red-hover: #41222c !important;
 
   --border-color: #202837 !important;
+
+  --google-blue: #4285f4 !important;
+  --google-red: #ea4335 !important;
+  --google-yellow: #fbbc05 !important;
+  --google-green: #34a853 !important;
 }
 
 * {
@@ -38,11 +43,11 @@ body {
   background: var(--background-root);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "NeueHaasUnica", Roboto, sans-serif;
+  font-family: 'NeueHaasUnica', Roboto, sans-serif;
 }
 
 .code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
