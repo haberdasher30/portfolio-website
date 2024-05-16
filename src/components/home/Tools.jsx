@@ -46,7 +46,7 @@ const LogoCloud = ({ aria_hidden = "false" }) => {
             alt={logo.alt}
             className={`${
               logo.alt === "Splunk" ? "h-8 md:h-12" : "h-16 md:h-24"
-            } w-auto mx-5 md:mx-10 transition-all duration-1000 ease-in-out hover:scale-110 hover:shadow-2xl`}
+            } w-auto mx-5 md:mx-10 transition-all duration-1000 ease-in-out hover:scale-110`}
           />
         </li>
       ))}
