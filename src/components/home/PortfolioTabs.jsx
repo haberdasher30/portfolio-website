@@ -24,6 +24,10 @@ export default function PortfolioTabs() {
       key: 'experience',
     },
     {
+      title: 'VLOGS',
+      key: 'vlogs',
+    },
+    {
       title: 'BLOGS',
       key: 'blogs',
     },
