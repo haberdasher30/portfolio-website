@@ -11,14 +11,15 @@ const GDSC = () => {
         Google Developer Student Club
       </h1>
 
-      <div className='flex flex-col md:flex-row items-start justify-center gap-5 w-full h-full'>
+      {/* <div className='flex flex-col md:flex-row items-start justify-center gap-5 w-full h-full'> */}
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start justify-center gap-5 w-full h-full'>
         {content.map((item, index) => (
           <Card
             key={index}
             className={`w-full h-full border-backgroundContainer text-whiteColor`}
             style={{ backgroundColor: `var(--${item.color})` }}
           >
-            <CardBody className='flex flex-col items-center justify-center gap-5 md:gap-10 text-center px-5 py-5 md:py-10'>
+            <CardBody className='flex flex-col items-center justify-start gap-5 md:gap-10 text-center px-5 py-5 md:py-10'>
               <h1 className='text-xl md:text-xl font-semibold'>{item.title}</h1>
 
               <div className='w-full flex items-center justify-center'>
@@ -31,8 +32,12 @@ const GDSC = () => {
                 />
               </div>
 
-              <div className='text-base font-medium text-left'>
-                {item.content}
+              <div className='px-4 md:p-1'>
+                <ul className='list-disc text-base font-medium text-left'>
+                  {item.content.map((i) => (
+                    <li>{i}</li>
+                  ))}
+                </ul>
               </div>
             </CardBody>
           </Card>
