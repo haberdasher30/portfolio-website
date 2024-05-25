@@ -64,9 +64,7 @@ const Hero = async () => {
 
         <div className='flex flex-col items-center justify-center gap-5 w-full text-center'>
           <h1 className='text-sm font-semibold text-whiteColor whitespace-break-spaces w-full px-3'>
-            I'm a computer science student skilled in defensive cybersecurity,
-            marketing, and management. Passionate about integrating
-            sustainability into project leadership.
+            {intro}
           </h1>
 
           <Link href='/about'>
