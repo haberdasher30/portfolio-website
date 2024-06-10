@@ -20,7 +20,7 @@ const GDSC = () => {
             className={`w-full h-full border-backgroundContainer text-whiteColor`}
             style={{ backgroundColor: `var(--${item.color})` }}
           >
-            <CardBody className='flex flex-col items-center justify-start gap-5 md:gap-10 text-center px-5 py-5 md:py-10'>
+            <CardBody className='w-full h-full flex flex-col items-center justify-start gap-5 md:gap-10 text-center px-5 py-5 md:py-10'>
               <h1 className='text-xl md:text-xl font-semibold'>{item.title}</h1>
 
               <div className='w-full flex items-center justify-center'>
