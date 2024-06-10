@@ -11,6 +11,7 @@ import {
 } from '@nextui-org/react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Check } from 'lucide-react';
 
 const PortfolioCard = ({ content }) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -22,7 +23,7 @@ const PortfolioCard = ({ content }) => {
           <CardBody className='flex flex-col items-center justify-center gap-10 text-center px-1 md:px-3 py-6 md:py-10'>
             <div className='w-full h-[120px] md:h-[200px] flex items-center justify-center'>
               <Image
-                src={content.logo[0].downloadURL}
+                src={content.logo && content.logo[0].downloadURL}
                 alt={content.title}
                 width={1000}
                 height={1000}
@@ -31,6 +32,18 @@ const PortfolioCard = ({ content }) => {
             </div>
 
             <h1 className='text-lg md:text-xl font-medium'>{content.title}</h1>
+
+            {content.status ? (
+              <div className='flex flex-row gap-2 items-center justify-center bg-backgroundGreen py-2 px-4 rounded-md tracking-[2px]'>
+                <Check className='text-greenColor' />
+                <p className='text-greenColor text-xs'>Completed</p>
+              </div>
+            ) : (
+              <div className='flex flex-row gap-2 items-center justify-center bg-backgroundYellow py-2 px-4 rounded-md tracking-[2px]'>
+                <div className='w-2 h-2 bg-yellowColor rounded-full' />
+                <p className='text-yellowColor text-xs'>Active</p>
+              </div>
+            )}
           </CardBody>
         </Card>
       </div>

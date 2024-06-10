@@ -9,12 +9,15 @@
   --green-color: #9fef00 !important;
   --gray-color: #a4b1cd !important;
   --red-color: #ff3e3e !important;
+  --yellow-color: #ffaf00 !important;
 
   --background-root: #141d2b !important;
   --background-navbar: #101927 !important;
   --background-container: #1a2332 !important;
+  --background-green: #9fef0012 !important;
   --background-red: #2f1e2a !important;
   --background-red-hover: #41222c !important;
+  --background-yellow: #ffaf001a !important;
 
   --border-color: #202837 !important;
 

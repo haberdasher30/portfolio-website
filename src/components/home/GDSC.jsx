@@ -1,6 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
-import { Card, CardBody } from '@nextui-org/react';
+import { Button, Card, CardBody, CardFooter } from '@nextui-org/react';
 
 import { content } from '@/data/gdsc';
 
@@ -34,12 +35,24 @@ const GDSC = () => {
 
               <div className='px-4 md:p-1'>
                 <ul className='list-disc text-base font-medium text-left'>
-                  {item.content.map((i) => (
-                    <li>{i}</li>
+                  {item.content.map((i, index) => (
+                    <li key={index}>{i}</li>
                   ))}
                 </ul>
               </div>
             </CardBody>
+
+            <CardFooter>
+              <Link
+                href={item.verify}
+                target='_blank'
+                className='w-full flex flex-row items-center justify-center mb-5'
+              >
+                <Button className='bg-backgroundNavbar hover:bg-backgroundRoot cursor-pointer text-whiteColor rounded-md py-4 px-4 md:px-8 w-full h-full font-medium tracking-[2px] text-xs'>
+                  VERIFY
+                </Button>
+              </Link>
+            </CardFooter>
           </Card>
         ))}
       </div>
