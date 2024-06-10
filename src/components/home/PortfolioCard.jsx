@@ -47,6 +47,7 @@ const PortfolioCard = ({ content }) => {
           </CardBody>
         </Card>
       </div>
+
       <Modal
         isOpen={isOpen}
         onOpenChange={onOpenChange}
@@ -77,7 +78,7 @@ const PortfolioCard = ({ content }) => {
                   CLOSE
                 </Button>
 
-                <Link href={content.verify} target='_blank'>
+                <Link href={content.verify ?? ''} target='_blank'>
                   <Button
                     onPress={onClose}
                     className='bg-backgroundNavbar hover:bg-backgroundRoot cursor-pointer text-whiteColor rounded-md py-4 px-4 md:px-8 h-full font-medium tracking-[2px] text-xs'
