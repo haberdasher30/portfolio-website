@@ -13,7 +13,7 @@ const GDSC = () => {
       </h1>
 
       {/* <div className='flex flex-col md:flex-row items-start justify-center gap-5 w-full h-full'> */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start justify-center gap-5 w-full h-full'>
+      <div className='flex flex-col md:grid lg:grid md:grid-cols-2 lg:grid-cols-4 items-start justify-center gap-5 w-full h-full'>
         {content.map((item, index) => (
           <Card
             key={index}
