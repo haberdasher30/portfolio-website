@@ -25,7 +25,7 @@ const Hero = async () => {
           height={3740}
           src='/funko.png'
           alt='Hero Funko'
-          className='w-auto h-[600px] bg-transparent select-none'
+          className='w-auto h-[60%] bg-transparent select-none'
           priority
         />
 

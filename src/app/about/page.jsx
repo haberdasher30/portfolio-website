@@ -40,7 +40,7 @@ const timeLineContents = [
 
 const About = () => {
   return (
-    <div className='container flex flex-col items-center justify-center gap-5 md:gap-8 w-full mt-[100px]'>
+    <div className='container flex flex-col items-center justify-center gap-5 md:gap-8 w-full mt-[100px] md:mt-[120px]'>
       <h1 className='text-2xl md:text-5xl text-whiteColor font-bold'>
         ABOUT ME
       </h1>
