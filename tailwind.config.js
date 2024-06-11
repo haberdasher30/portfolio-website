@@ -22,6 +22,7 @@ module.exports = withMT({
         backgroundNavbar: 'var(--background-navbar)',
         backgroundContainer: 'var(--background-container)',
         backgroundGreen: 'var(--background-green)',
+        backgroundGreenHover: 'var(--background-green-hover)',
         backgroundRed: 'var(--background-red)',
         backgroundRedHover: 'var(--background-red-hover)',
         backgroundYellow: 'var(--background-yellow)',

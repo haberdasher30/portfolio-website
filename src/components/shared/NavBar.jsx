@@ -28,7 +28,7 @@ const NavBar = () => {
           href='https://drive.google.com/file/d/1ZEsJF9K_PhEh5bPa_rQDm2C9Zjk1-2cA/view?usp=sharing'
           target='_blank'
         >
-          <Button className='bg-backgroundContainer hover:bg-backgroundNavbar text-greenColor rounded-md cursor-pointer py-4 px-4 md:px-8 h-full font-semibold tracking-[2px] text-xs'>
+          <Button className='bg-backgroundGreen hover:bg-backgroundGreenHover text-greenColor rounded-md cursor-pointer py-4 px-4 md:px-8 h-full font-semibold tracking-[2px] text-xs'>
             CV
           </Button>
         </Link>
