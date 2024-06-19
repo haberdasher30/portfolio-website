@@ -41,18 +41,6 @@ const GDSC = () => {
                 </ul>
               </div>
             </CardBody>
-
-            <CardFooter>
-              <Link
-                href={item.verify}
-                target='_blank'
-                className='w-full flex flex-row items-center justify-center mb-5'
-              >
-                <Button className='bg-backgroundNavbar hover:bg-backgroundRoot cursor-pointer text-whiteColor rounded-md py-4 px-4 md:px-8 w-full h-full font-medium tracking-[2px] text-xs'>
-                  VERIFY
-                </Button>
-              </Link>
-            </CardFooter>
           </Card>
         ))}
       </div>
