@@ -1,8 +1,6 @@
 import Hero from '@/components/home/Hero';
 import Tools from '@/components/home/Tools';
 import PortfolioTabs from '@/components/home/PortfolioTabs';
-import GDSC from '@/components/home/GDSC';
-import Video from '@/components/home/Video';
 
 export default function Home() {
   return (
