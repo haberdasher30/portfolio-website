@@ -9,13 +9,13 @@ export default function Home() {
     <div className='flex flex-col items-center gap-10 md:gap-20 w-full h-full'>
       <Hero />
 
-      <Video />
+      {/* <Video /> */}
 
       <Tools />
 
       <PortfolioTabs />
 
-      <GDSC />
+      {/* <GDSC /> */}
     </div>
   );
 }
