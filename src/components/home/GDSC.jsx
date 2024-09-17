@@ -17,7 +17,7 @@ const GDSC = () => {
         {content.map((item, index) => (
           <Card
             key={index}
-            className={`w-full h-full border-backgroundContainer text-whiteColor`}
+            className={`w-full h-max border-backgroundContainer text-whiteColor`}
             style={{ backgroundColor: `var(--${item.color})` }}
           >
             <CardBody className='w-full h-full flex flex-col items-center justify-start gap-5 md:gap-10 text-center px-5 py-5 md:py-10'>
