@@ -21,7 +21,7 @@ const Videos = () => {
   }, []);
 
   return (
-    <div className='container flex flex-col items-center justify-center gap-5 md:gap-10 w-full'>
+    <div className='container flex flex-col items-center justify-center gap-5 md:gap-10 w-full px-5 md:px-0'>
       <h1 className='text-2xl md:text-4xl text-greenColor font-bold'>VIDEOS</h1>
 
       {videos.length === 0 ? (

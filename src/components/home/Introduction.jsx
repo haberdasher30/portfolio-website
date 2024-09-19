@@ -21,13 +21,11 @@ const Introduction = async () => {
 
   return (
     <div className='container grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1 w-full px-5 md:px-0 py-10 md:py-20'>
-      <div className='w-full h-full'>
-        <h1 className='code text-6xl md:text-6xl font-bold text-greenColor'>
-          "{quote}"
-        </h1>
-      </div>
+      <h1 className='code text-5xl md:text-6xl font-bold text-greenColor'>
+        "{quote}"
+      </h1>
 
-      <div className='flex flex-col items-start justify-center gap-10 w-full'>
+      <div className='flex flex-col items-start justify-center gap-5 md:gap-10 w-full'>
         <h1 className='text-xl font-semibold text-whiteColor whitespace-break-spaces max-w-screen-md'>
           {intro}
         </h1>
