@@ -1,21 +1,17 @@
 import Hero from '@/components/home/Hero';
-import GDSC from '@/components/home/GDSC';
 import Tools from '@/components/home/Tools';
-import Video from '@/components/home/Video';
+import Videos from '@/components/home/Videos';
 import PortfolioTabs from '@/components/home/PortfolioTabs';
+import Introduction from '@/components/home/Introduction';
 
 export default function Home() {
   return (
-    <div className='flex flex-col items-center gap-10 md:gap-20 w-full h-full'>
+    <div className='flex flex-col items-center gap-10 md:gap-20 mb-10 md:mb-20 w-full h-full'>
       <Hero />
-
-      <Video />
-
+      <Introduction />
       <Tools />
-
       <PortfolioTabs />
-
-      <GDSC />
+      <Videos />
     </div>
   );
 }

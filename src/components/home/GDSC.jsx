@@ -1,7 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import { Button, Card, CardBody, CardFooter } from '@nextui-org/react';
+import { Card, CardBody } from '@nextui-org/react';
 
 import { content } from '@/data/gdsc';
 

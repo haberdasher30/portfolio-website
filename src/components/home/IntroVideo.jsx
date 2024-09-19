@@ -1,17 +1,17 @@
-const Video = () => {
+const IntroVideo = () => {
   return (
     <div className='container flex flex-col items-center justify-center gap-5 w-full'>
       <iframe
         allowFullScreen
         frameBorder='0'
         className='w-full aspect-video'
-        src='https://www.youtube.com/embed/XgAykC5ywHo'
+        allow='autoplay; encrypted-media'
         referrerPolicy='strict-origin-when-cross-origin'
         title='Google Developer Student Clubs (GDSC) Lead Application'
-        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;'
-      ></iframe>
+        src='https://www.youtube.com/embed/XgAykC5ywHo?autoplay=1&loop=1&controls=0&mute=1&playlist=XgAykC5ywHo'
+      />
     </div>
   );
 };
 
-export default Video;
+export default IntroVideo;
