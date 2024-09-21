@@ -11,11 +11,11 @@ export const metadata = {
   openGraph: {
     title: 'Portfolio | Nishit Batwal',
     description: 'Portfolio of Nishit Batwal',
-    url: 'https://ninshitbatwal.com',
+    url: 'https://nishitbatwal.com',
     siteName: 'Your Website',
     images: [
       {
-        url: 'https://ninshitbatwal.com/logo.png',
+        url: 'https://nishitbatwal.com/logo.png',
         width: 1080,
         height: 1080,
         alt: 'Nishit Batwall',
@@ -28,7 +28,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Portfolio | Nishit Batwal',
     description: 'Portfolio of Nishit Batwal',
-    images: ['https://ninshitbatwal.com/logo.png'],
+    images: ['https://nishitbatwal.com/logo.png'],
   },
   robots: {
     index: true,
