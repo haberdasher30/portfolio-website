@@ -5,60 +5,42 @@ import { Analytics } from '@vercel/analytics/react';
 import NavBar from '@/components/shared/NavBar';
 import { Providers } from '@/components/shared/Provider';
 
-export const viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  themeColor: '#141d2b',
-};
-
 export const metadata = {
-  title: 'Nishit Batwal | Portfolio',
-  description: "Nishit Batwal's portfolio",
-  image: '/logo.jpeg',
-  metadataBase: new URL('https://www.nishitbatwal.com/'),
+  title: 'Portfolio | Nishit Batwal',
+  description: 'Portfolio of Nishit Batwal',
   openGraph: {
-    siteName: 'Nishit | Portfolio',
-    type: 'website',
+    title: 'Portfolio | Nishit Batwal',
+    description: 'Portfolio of Nishit Batwal',
+    url: 'https://ninshitbatwal.com',
+    siteName: 'Your Website',
+    images: [
+      {
+        url: 'https://ninshitbatwal.com/logo.png',
+        width: 1080,
+        height: 1080,
+        alt: 'Nishit Batwall',
+      },
+    ],
     locale: 'en_US',
-    image: '/logo.jpeg',
+    type: 'website',
   },
-  applicationName: 'Nishit Batwal | Portfolio',
-  appleWebApp: {
-    title: 'Nishit Batwal | Portfolio',
-    statusBarStyle: 'default',
-    capable: true,
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Portfolio | Nishit Batwal',
+    description: 'Portfolio of Nishit Batwal',
+    images: ['https://ninshitbatwal.com/logo.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
   icons: {
-    icon: [
-      {
-        url: '/favicon.ico',
-        type: 'image/x-icon',
-      },
-      {
-        url: '/favicon-16x16.png',
-        sizes: '16x16',
-        type: 'image/png',
-      },
-    ],
-    shortcut: [
-      {
-        url: '/favicon.ico',
-        type: 'image/x-icon',
-      },
-    ],
-    apple: [
-      {
-        url: '/apple-icon-57x57.png',
-        sizes: '57x57',
-        type: 'image/png',
-      },
-      {
-        url: '/apple-icon-60x60.png',
-        sizes: '60x60',
-        type: 'image/png',
-      },
-    ],
+    icon: '/icons/favicon.ico',
+    shortcut: '/icons/favicon-32x32.png',
+    apple: '/icons/apple-touch-icon.png',
   },
+  themeColor: '#141d2b',
+  viewport: 'width=device-width, initial-scale=1',
 };
 
 export default function RootLayout({ children }) {

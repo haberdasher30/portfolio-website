@@ -35,7 +35,7 @@ const NavBar = () => {
       <div className='flex flex-row items-center gap-5'>
         <Link href='/'>
           <Image
-            src='/logo.jpeg'
+            src='/navbar.jpeg'
             alt='Vercel Logo'
             width={100}
             height={100}
