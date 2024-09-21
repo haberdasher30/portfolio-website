@@ -38,34 +38,6 @@ const timeLineContents = [
   },
 ];
 
-export const metadata = {
-  title: 'About | Nishit Batwal',
-  description: 'About Nishit Batwal',
-  keywords: [
-    'portfolio',
-    'nishit batwal',
-    'cybersecurity',
-    'gdsc',
-    'gdg',
-    'developer student clubs',
-    'google developer groups',
-    'google',
-    'developer',
-    'student',
-    'clubs',
-    'groups',
-    'hack the box',
-    'hackthebox',
-  ],
-  openGraph: {
-    url: 'https://www.nishitbatwal.com/',
-    type: 'website',
-    title: 'About | Nishit Batwal',
-    description: 'About Nishit Batwal',
-    image: '/logo.jpeg',
-  },
-};
-
 const About = () => {
   return (
     <div className='container flex flex-col items-center justify-center gap-5 md:gap-8 w-full mt-[100px] md:mt-[120px]'>
